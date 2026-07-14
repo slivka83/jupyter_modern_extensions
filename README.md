@@ -30,7 +30,7 @@
 | 16 | **Hide Input** | Скрытие кода отдельной ячейки | Можно доработать 🟡 (metadata + CSS) | Встроено: View → Collapse Selected Code |
 | 17 | **Hide Input All** | Скрытие кода всех ячеек | Можно доработать 🟡 (metadata + CSS) | Встроено: View → Collapse All Code |
 | 18 | **Scratchpad** | Песочница для кода (отдельная область) | Встроено: Run → Create Console for Notebook | Встроено: Code Console |
-| 19 | **Ruler** | Вертикальная линия-ориентир (80 символов) | Можно доработать 🟡 (CodeMirror API) | Встроено: Settings → codeCellConfig.rulers |
+| 19 | **Ruler** | Вертикальная линия-ориентир (80 символов) | Можно доработать 🟡 (CodeMirror API) | Встроено: Settings → Settings Editor → Notebook → Code Cell Configuration → Rulers |
 | 20 | **Python Markdown** | Вставка переменных Python в Markdown | Можно доработать 🔴 (kernel + renderer) | Можно доработать 🔴 (kernel + renderer) |
 | 21 | **Gist-it** | Публикация ноутбука как GitHub Gist | Можно доработать 🟡 (GitHub API) | Можно доработать 🟡 (GitHub API) |
 | 22 | **Printview** | Конвертация в HTML/PDF в новой вкладке | Можно доработать 🟡 (nbconvert API) | Встроено: File → Export Notebook As |
