@@ -14,8 +14,8 @@
 |---|-----------|-----------|-----|------------|
 | 1 | **Table of Contents (2)** | Оглавление ноутбука из заголовков | Встроено: View → Table of Contents | Встроено: View → Table of Contents |
 | 2 | **Collapsible Headings** | Сворачивание секций по markdown-заголовкам | Встроено: клик по ▶ в ToC | Встроено: клик по ▶ в ToC |
-| 3 | **Code Folding** | Сворачивание кода по отступам/скобкам | Можно доработать 🟢 (CodeMirror API) | Встроено: Settings → codeCellConfig.codeFolding |
-| 4 | **Code Folding (Editor)** | Сворачивание в редакторе файлов | Можно доработать 🟢 (CodeMirror API) | Встроено: Settings → editorConfig.codeFolding |
+| 3 | **Code Folding** | Сворачивание кода по отступам/скобкам | Можно доработать 🟢 (CodeMirror API) | Встроено: Settings → Settings Editor → Notebook → Code Cell Configuration → Code Folding |
+| 4 | **Code Folding (Editor)** | Сворачивание в редакторе файлов | Можно доработать 🟢 (CodeMirror API) | Встроено: Settings → Settings Editor → Text Editor → Editor configuration → Code Folding |
 | 5 | **Variable Inspector** | Окно переменных ядра (имя, тип, значение) | Можно поставить: pip install lckr-jupyterlab-variableinspector | Можно поставить: pip install lckr-jupyterlab-variableinspector |
 | 6 | **ExecuteTime** | Время выполнения ячейки | Можно поставить: pip install jupyterlab-execute-time | Можно поставить: pip install jupyterlab-execute-time |
 | 7 | **Hinterland** | Автодополнение кода при вводе | Можно поставить: pip install jupyterlab-lsp python-lsp-server | Можно поставить: pip install jupyterlab-lsp python-lsp-server |
