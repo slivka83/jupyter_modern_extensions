@@ -42,3 +42,4 @@ Not compatible with JL 4.x: jupyterlab-autorun-cells (requires JL 3.x)
 ## Workflow
 
 - Меняй README если надо исправить ошибки в описании
+- Автоматически пушь все изменения
