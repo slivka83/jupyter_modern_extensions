@@ -73,32 +73,6 @@
 
 ---
 
-## Сводка по_NB7
-
-| Статус | Кол-во | Расширения |
-|--------|--------|------------|
-| Встроено | 8 | ToC, Collapsible Headings, Toggle Line Numbers, AddBefore, Rubberband, Move Selected Cells, Runtools (частично), Scratchpad (частично) |
-| Можно поставить | 10 | ExecuteTime, Limit Output, Skip-Traceback, Notify, Hinterland, Spellchecker, Select Keymap, Freeze, Variable Inspector, RISE, Code Prettify, Split Cells |
-| Можно доработать 🟢 | 12 | Code Folding, Hide Header, Table Beautifier, AutoSave Time, Code Font Size, CSS Selector, Datestamper, Help Panel, Scroll Down, SKILL Syntax, CodeMirror Mode Extensions |
-| Можно доработать 🟡 | 17 | Snippets, Snippets Menu, Comment/Uncomment, Navigation Hotkeys, Zen Mode, Hide Input, Hide Input All, Ruler, Gist-it, Printview, Highlighter, Autoscroll, Cell Filter, Equation Numbering, Export Embedded HTML, Go to Running Cell, Load TeX Macros, QTConsole, Tree Filter, Live Markdown Preview, Init Cell |
-| Можно доработать 🔴 | 6 | Python Markdown, Keyboard Shortcut Editor, Exercise, Exercise2, nbTranslate, Execution Dependencies |
-| **Итого** | **58** | |
-
----
-
-## Сводка по JupyterLab
-
-| Статус | Кол-во | Расширения |
-|--------|--------|------------|
-| Встроено | 18 | ToC, Collapsible Headings, Code Folding, Code Folding (Editor), Hide Header, Hide Input, Hide Input All, Scratchpad, Ruler, Toggle Line Numbers, AddBefore, Rubberband, Move Selected Cells, AutoSave Time, Code Font Size, CSS Selector, Help Panel, Tree Filter |
-| Можно поставить | 14 | Variable Inspector, ExecuteTime, Hinterland, Snippets, Snippets Menu, Freeze, Limit Output, Spellchecker, Split Cells, Select Keymap, Notify, Skip-Traceback, Init Cell, Code Prettify |
-| Можно доработать 🟢 | 6 | Table Beautifier, CodeMirror Mode Extensions, Datestamper, Scroll Down, SKILL Syntax |
-| Можно доработать 🟡 | 10 | Gist-it, Highlighter, Autoscroll, Equation Numbering, Go to Running Cell, Load TeX Macros, QTConsole, Live Markdown Preview, Printview, Export Embedded HTML |
-| Можно доработать 🔴 | 5 | Python Markdown, Exercise, Exercise2, nbTranslate, Execution Dependencies |
-| **Итого** | **58** | |
-
----
-
 ## Итого: что уже работает
 
 | Платформа | Встроено + поставить | доработать 🟢 | доработать 🟡 | доработать 🔴 |
