@@ -38,3 +38,7 @@ jupyter labextension list  # check what's installed
 Working: jupyterlab-execute-time, jupyterlab-limit-output, jupyterlab-skip-traceback, jupyterlab-notifications, jupyterlab-spellchecker, jupyterlab-vim, jupyterlab-freeze, jupyterlab-rise, jupyterlab-code-formatter, jupyterlab-gridwidth, lckr-jupyterlab-variableinspector, python-lsp-server
 
 Not compatible with JL 4.x: jupyterlab-autorun-cells (requires JL 3.x)
+
+## Workflow
+
+- Меняй README если надо исправить ошибки в описании
