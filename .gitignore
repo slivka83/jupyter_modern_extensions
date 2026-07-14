@@ -1,48 +1,40 @@
-*~
-
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
-
-# Unit test / coverage reports
-htmlcov
-.tox
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-
-# Sphinx documentation
-docs/_build
-# nbextensions installed as part of sphinx-build
-docs/source/nbextensions
-# auto-generated Sphinx files
-docs/source/nbextensions.rst
-
-.idea
-
-# pip install
-*.egg
-*.egg-info
-dist
-build
-eggs
-.eggs
-parts
-bin
-var
-sdist
-develop-eggs
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
 .installed.cfg
-lib
-lib64
-venv*/
-pyvenv*/
-MANIFEST
+*.egg
 
-# Installer logs
-pip-log.txt
+# Jupyter
+.ipynb_checkpoints/
 
-# ipython notebook checkpoints
-.ipynb_checkpoints
+# Environments
+.env
+.venv
+env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

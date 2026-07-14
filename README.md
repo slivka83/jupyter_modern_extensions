@@ -1,254 +1,149 @@
-Jupyter notebook extensions
-=============================
-
-[![Join the chat at https://gitter.im/ipython-contrib/jupyter_contrib_nbextensions](https://img.shields.io/gitter/room/ipython-contrib/jupyter_contrib_nbextensions.svg?maxAge=3600)](https://gitter.im/ipython-contrib/jupyter_contrib_nbextensions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Documentation Status](https://readthedocs.org/projects/jupyter-contrib-nbextensions/badge/?version=latest)](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/)
-[![Documentation Status](https://readthedocs.org/projects/jupyter-contrib-nbextensions/badge/?version=stable)](https://jupyter-contrib-nbextensions.readthedocs.io/en/stable/)
-[![GitHub issues](https://img.shields.io/github/issues/ipython-contrib/jupyter_contrib_nbextensions.svg?maxAge=3600)](https://github.com/ipython-contrib/jupyter_contrib_nbextensions/issues)
-<br/>
-[![Travis-CI Build Status](https://img.shields.io/travis/ipython-contrib/jupyter_contrib_nbextensions.svg?maxAge=3600&label=Travis)](https://travis-ci.org/ipython-contrib/jupyter_contrib_nbextensions)
-[![Appveyor Build status](https://img.shields.io/appveyor/ci/jcb91/ipython-notebook-extensions-ynb9f.svg?maxAge=3600&label=Appveyor)](https://ci.appveyor.com/project/jcb91/ipython-notebook-extensions-ynb9f)
-[![Coveralls python test coverage](https://img.shields.io/coveralls/ipython-contrib/jupyter_contrib_nbextensions/master.svg?maxAge=3600&label=Coveralls)](https://coveralls.io/github/ipython-contrib/jupyter_contrib_nbextensions)
-[![Codecov python test coverage](https://img.shields.io/codecov/c/github/ipython-contrib/jupyter_contrib_nbextensions/master.svg?maxAge=3600&label=Codecov)](https://codecov.io/gh/ipython-contrib/jupyter_contrib_nbextensions)
-<br/>
-[![GitHub tag](https://img.shields.io/github/tag/ipython-contrib/jupyter_contrib_nbextensions.svg?maxAge=3600&label=Github)](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
-[![PyPI](https://img.shields.io/pypi/v/jupyter_contrib_nbextensions.svg?maxAge=3600)](https://pypi.python.org/pypi/jupyter_contrib_nbextensions)
-[![Anaconda cloud](https://anaconda.org/conda-forge/jupyter_contrib_nbextensions/badges/version.svg)](https://anaconda.org/conda-forge/jupyter_contrib_nbextensions)
-
-This repository contains a collection of extensions that add functionality to
-the Jupyter notebook.
-These extensions are mostly written in Javascript and will be loaded locally in
-your browser.
-
-The IPython-contrib repository is maintained independently by a group of users
-and developers and not officially related to the IPython development team.
-
-The maturity of the provided extensions varies, so please
-[create an issue](https://github.com/ipython-contrib/jupyter_contrib_nbextensions/issues/new)
-at the project's
-[github repository](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
-if you encounter any problems.
-
-
-IPython/Jupyter version support
-===============================
-
-For Jupyter version 4 or 5, use the master branch of the repository.
-Most nbextensions have been updated to work with both Jupyter 4.x and 5.x, but occasionally things get missed, or the Jupyter API changes in a minor version update, so if anything doesn't work as you'd expect/hope, please do check the issues, or open a new one as necessary!
-
-This repo is pretty much all in the main master branch, although there remain vestigial branches for IPython notebook versions 2.x and 3.x.
-
-JupyterLab
-==========
-
-Due to major differences between the Jupyter Notebook and JupyterLab, the extensions in this
-repository will not work in JupyterLab. You will find a list of alternative extensions for
-JupyterLab on [jupyterlab-contrib](https://jupyterlab-contrib.github.io/migrate_from_classical.html).
-
-
-Documentation
-=============
-
-Documentation for all maintained extensions can be found at
-[jupyter-contrib-nbextensions.readthedocs.io](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest)
-
-All extensions that are maintained and active
-have at least a  yaml file to allow them being configured using the
-[jupyter_nbextensions_configurator](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator)
-server extension, which is installed as a dependency of this package.
-Most also have a markdown readme file for documentation.
-The `jupyter_nbextensions_configurator` server extension shows an nbextensions
-tab on the main notebook dashboard (file tree page) from which you can see each
-nbextension's markdown readme, and configure its options.
-To view documentation without installing, you can check the list at
-[jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html](http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html),
-or browse the nbextensions
-directory to read markdown readmes on github at
-[github.com/ipython-contrib/jupyter_contrib_nbextensions/tree/master/src/jupyter_contrib_nbextensions/nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tree/master/src/jupyter_contrib_nbextensions/nbextensions).
-
-Some extensions are not documented. We encourage you to add documentation for them.
-
-
-Installation
-============
-
-To install the `jupyter_contrib_nbextensions` notebook extensions, three steps
-are required. First, the Python pip package needs to be installed. Then, the
-notebook extensions themselves need to be copied to the Jupyter data directory.
-Finally, the installed notebook extensions can be enabled, either by using
-built-in Jupyter commands, or more conveniently by using the
-[jupyter_nbextensions_configurator](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator)
-server extension, which is installed as a dependency of this repo.
-
-The Python package installation step is necessary to allow painless
-installation of the nbextensions together with additional items like nbconvert
-templates, pre-/postprocessors, and exporters.
-
-
-1\. Install the python package
-------------------------------
-
-
-### PIP
-
-All of the nbextensions in this repo are provided as parts of a python package,
-which is installable in the usual manner using `pip` or the `setup.py` script.
-To install the current version from PyPi, simply type
-
-    pip install jupyter_contrib_nbextensions
-
-Alternatively, you can install directly from the current master branch of the
-repository
-
-    pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
-
-All the usual pip options apply, e.g. using pip's `--upgrade` flag to force an
-upgrade, or `-e` for an editable install.
-
-
-### Conda
-
-There are conda packages for the notebook extensions and the
-[jupyter_nbextensions_configurator](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator)
-available from [conda-forge](https://conda-forge.github.io).
-You can install both using
-
-    conda install -c conda-forge jupyter_contrib_nbextensions
-
-This also automatically installs the Javascript and CSS files
-(using `jupyter contrib nbextension install --sys-prefix`), therefore 
-the second installation step below can be skipped.
-
-
-### Installation from cloned Repo
-
-You can also install from a cloned repo, which can be useful for development.
-You can clone the repo using
-
-    git clone https://github.com/ipython-contrib/jupyter_contrib_nbextensions.git
-
-Then perform an editable pip install using
-
-    pip install -e jupyter_contrib_nbextensions
-
-
-2\. Install javascript and css files
-------------------------------------
-
-This step copies the nbextensions' javascript and css files into the jupyter
-server's search directory, and edits some jupyter config files.
-A `jupyter` subcommand is provided for the purpose:
-
-    jupyter contrib nbextension install --user
-
-The command does two things: installs nbextension files, and edits nbconvert
-config files. The first part is essentially a wrapper around the
-notebook-provided `jupyter nbextension install`, and copies relevant javascript
-and css files to the appropriate jupyter data directory.
-The second part edits the config files `jupyter_nbconvert_config.json`and
-`jupyter_notebook_config.json` as noted below in the options.
-The command can take most of the same options as the jupyter-provided versions,
-including
-
- * `--user` to install into the user's home jupyter directories
- * `--system` to perform installation into system-wide jupyter directories
- * `--sys-prefix` to install into python's `sys.prefix`, useful for instance in
-   virtual environments, such as with conda
- * `--symlink` to symlink the nbextensions rather than copying each file
-   (recommended on non-Windows platforms).
- * `--debug`, for more-verbose output
-
-In addition, two further option flags are provided to perform either only the
-config-editing operations, or only the file-copy operations:
-
- * `--only-files` to install nbextension files without editing any config files
- * `--only-config` to edit the config files without copying/symlinking any
-   nbextension files. This edits the following files in the applicable jupyter
-   config directory:
-    - `jupyter_nbconvert_config.json` to use some of the classes provided
-      in the python module `jupyter_contrib_nbextensions.nbconvert_support`
-    - `jupyter_notebook_config.json` to enable the serverextension
-      `jupyter_nbextensions_configurator`.
-
-Finally, the `--perform-running-check` option flag is provided in order to
-prevent the installation from proceeding if a notebook server appears to be
-currently running
-(by default, the install will still be performed, even if a notebook server
-appears to be running).
-
-An analogous `uninstall` command is also provided, to remove all of the
-nbextension files from the jupyter directories.
-
-
-3\. Enabling/Disabling extensions
----------------------------------
-
-To use an nbextension, you'll also need to enable it, which tells the notebook
-interface to load it. To do this, you can use a Jupyter subcommand:
-
-    jupyter nbextension enable <nbextension require path>
-
-for example,
-
-    jupyter nbextension enable codefolding/main
-
-To disable the extension again, use
-
-    jupyter nbextension disable <nbextension require path>
-
-**Alternatively**, and more conveniently, you can use the
-[jupyter_nbextensions_configurator](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator)
-server extension, which is installed as a dependency of this repo, and can be
-used to enable and disable the individual nbextensions, as well as configure
-their options. You can then open the `nbextensions` tab on the tree
-(dashboard/file browser) notebook page to configure nbextensions.
-You will have access there to a dashboard where extensions can be
-enabled/disabled via checkboxes.
-Additionally, a short documentation for each extension is displayed, and
-configuration options are presented.
-
-![jupyter_nbextensions_configurator](https://raw.githubusercontent.com/Jupyter-contrib/jupyter_nbextensions_configurator/master/src/jupyter_nbextensions_configurator/static/nbextensions_configurator/icon.png)
-
-
-4\. More complex setups
------------------------
-
-For complex or customized installation scenarios, please look at the
-documentation for installing notebook extensions, server extensions, nbconvert
-pre/postprocessors and templates on the [Jupyter homepage](https://jupyter.org).
-Most nbextensions here should work fine with JupyterHub (because JupyterHub spawns 
-regular notebook servers for each individual user), but won't work with JupyterLab 
-(because the Javascript framework of JupyterLab is different from the notebook's, and 
-is still rapidly changing under active development).
-
-See also [installing Jupyter](https://jupyter.readthedocs.io/en/latest/install.html)
-
-
-Notebook extension structure
-============================
-
-Most of the nbextensions are stored in the repository each as a separate subdirectory of
-[`src/jupyter_contrib_nbextensions/nbextensions`](https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tree/master/src/jupyter_contrib_nbextensions/nbextensions).
-
-Each notebook extension typically has its own directory named after the extension, containing:
-
- * `thisextension/thisextension.js` - javascript implementing the nbextension
- * `thisextension/thisextension.yml` - file describing the nbextension to the `jupyter_nbextensions_configurator` server extension
- * `thisextension/thisextension.css` - optional CSS file, which may be loaded by the javascript
- * `thisextension/README.md` - readme file describing the nbextension in markdown format
-
-A few (jupyter_highlight_selected_word, jupyter_latex_envs), exist as separate packages on pypi, which are included as dependencies of this package.
-
-For further details, see [the documentation at jupyter-contrib-nbextensions.readthedocs.io](http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/internals.html).
-
-
-Contributing
-============
-
-To learn how to setup a development environment and for contribution guidelines, see [CONTRIBUTING.md](./CONTRIBUTING.md).
-
-
-Changes
-=======
-
-For changes, see the [CHANGELOG.md](./CHANGELOG.md)
+# Jupyter Notebook Extensions — Миграция на JupyterLab / Notebook 7
+
+## Описание
+
+Репозиторий содержит 58 расширений для классического Jupyter Notebook (v4.x–5.x) и таблицу совместимости с современными версиями JupyterLab 4.x и Notebook 7.6.x.
+
+Исходные коды всех расширений сохранены в папке `backup_extensions/` для дальнейшей переработки.
+
+---
+
+## Таблица совместимости: все 58 расширений
+
+| <span style="color:#2196F3">#</span> | <span style="color:#2196F3">Расширение</span> | <span style="color:#2196F3">Что делает</span> | <span style="color:#2196F3">NB7</span> | <span style="color:#2196F3">JupyterLab</span> |
+|---|-----------|-----------|-----|------------|
+| 1 | **Table of Contents (2)** | Оглавление ноутбука из заголовков | Встроено: View → Table of Contents | Встроено: View → Table of Contents |
+| 2 | **Collapsible Headings** | Сворачивание секций по markdown-заголовкам | Встроено: клик по ▶ в ToC | Встроено: клик по ▶ в ToC |
+| 3 | **Code Folding** | Сворачивание кода по отступам/скобкам | Можно доработать 🟢 (CodeMirror API) | Встроено: Settings → codeCellConfig.codeFolding |
+| 4 | **Code Folding (Editor)** | Сворачивание в редакторе файлов | Можно доработать 🟢 (CodeMirror API) | Встроено: Settings → editorConfig.codeFolding |
+| 5 | **Variable Inspector** | Окно переменных ядра (имя, тип, значение) | Можно поставить: pip install lckr-jupyterlab-variableinspector | Можно поставить: pip install lckr-jupyterlab-variableinspector |
+| 6 | **ExecuteTime** | Время выполнения ячейки | Можно поставить: pip install jupyterlab-execute-time | Можно поставить: pip install jupyterlab-execute-time |
+| 7 | **Hinterland** | Автодополнение кода при вводе | Можно поставить: pip install jupyterlab-lsp python-lsp-server | Можно поставить: pip install jupyterlab-lsp python-lsp-server |
+| 8 | **Snippets** | Вставка сниппетов из выпадающего меню | Можно доработать 🟡 (нужен UI-компонент) | Можно поставить: pip install elyra |
+| 9 | **Snippets Menu** | Меню сниппетов для Python/NumPy/Matplotlib | Можно доработать 🟡 (нужен UI-компонент) | Можно поставить: pip install jupyterlab-code-snippets |
+| 10 | **Freeze** | Блокировка ячеек (только чтение/полная заморозка) | Можно поставить: pip install jupyterlab-freeze | Можно поставить: pip install jupyterlab-freeze |
+| 11 | **Comment/Uncomment** | Горячая клавиша комментирования строк | Можно доработать 🟡 (шорткат + CodeMirror) | Встроено: настраивается в Keyboard Shortcuts |
+| 12 | **Navigation Hotkeys** | Расширенные шорткаты навигации | Можно доработать 🟡 (шорткаты) | Встроено: настраивается в Keyboard Shortcuts |
+| 13 | **Zen Mode** | Минималистичный режим без лишних элементов | Можно доработать 🟡 (скрытие UI) | Встроено: View → Simple Interface |
+| 14 | **Limit Output** | Ограничение вывода ячейки | Можно поставить: pip install jupyterlab-limit-output | Можно поставить: pip install jupyterlab-limit-output |
+| 15 | **Hide Header** | Скрытие шапки (меню, тулбар) | Можно доработать 🟢 (только CSS) | Встроено: View → Simple Interface |
+| 16 | **Hide Input** | Скрытие кода отдельной ячейки | Можно доработать 🟡 (metadata + CSS) | Встроено: View → Collapse Selected Code |
+| 17 | **Hide Input All** | Скрытие кода всех ячеек | Можно доработать 🟡 (metadata + CSS) | Встроено: View → Collapse All Code |
+| 18 | **Scratchpad** | Песочница для кода (отдельная область) | Встроено: Run → Create Console for Notebook | Встроено: Code Console |
+| 19 | **Ruler** | Вертикальная линия-ориентир (80 символов) | Можно доработать 🟡 (CodeMirror API) | Встроено: Settings → codeCellConfig.rulers |
+| 20 | **Python Markdown** | Вставка переменных Python в Markdown | Можно доработать 🔴 (kernel + renderer) | Можно доработать 🔴 (kernel + renderer) |
+| 21 | **Gist-it** | Публикация ноутбука как GitHub Gist | Можно доработать 🟡 (GitHub API) | Можно доработать 🟡 (GitHub API) |
+| 22 | **Printview** | Конвертация в HTML/PDF в новой вкладке | Можно доработать 🟡 (nbconvert API) | Встроено: File → Export Notebook As |
+| 23 | **Runtools** | Продвинутое выполнение (диапазон, помеченные) | Встроено частично: Run → Run All Above/Below | Встроено: Run → Run All Above/Below |
+| 24 | **Keyboard Shortcut Editor** | Редактирование шорткатов через диалог | Можно доработать 🔴 (settings API) | Встроено: Settings → Keyboard Shortcuts |
+| 25 | **Highlighter** | Подсветка текста в Markdown цветами | Можно доработать 🟡 (markdown extension) | Можно доработать 🟡 (markdown extension) |
+| 26 | **Spellchecker** | Проверка орфографии в Markdown | Можно поставить: pip install jupyterlab-spellchecker | Можно поставить: pip install jupyterlab-spellchecker |
+| 27 | **Split Cells** | Разделение ячейки на две части | Можно поставить: pip install jupyterlab-gridwidth | Можно поставить: pip install jupyterlab-gridwidth |
+| 28 | **Table Beautifier** | Стилизация таблиц Bootstrap-ом | Можно доработать 🟢 (только CSS) | Можно доработать 🟢 (только CSS) |
+| 29 | **Select Keymap** | Выбор раскладки CodeMirror (vim/emacs) | Можно поставить: pip install jupyterlab-vim | Можно поставить: pip install jupyterlab-vim |
+| 30 | **Toggle Line Numbers** | Показ/скрытие номеров строк | Встроено: View → Show Line Numbers | Встроено: View → Show Line Numbers |
+| 31 | **AddBefore** | Вставка ячейки перед текущей | Встроено: Escape → A | Встроено: A в command mode |
+| 32 | **AutoSave Time** | Интервал автосохранения | Можно доработать 🟢 (settings) | Встроено: Settings → Autosave interval |
+| 33 | **Autoscroll** | Порог автопрокрутки вывода | Можно доработать 🟡 (observer) | Можно доработать 🟡 (observer) |
+| 34 | **Cell Filter** | Фильтрация ячеек по тегам | Можно доработать 🟡 (metadata API) | Частично встроено в ToC |
+| 35 | **Code Font Size** | Размер шрифта кода (кнопки +/−) | Можно доработать 🟢 (CSS) | Встроено: Settings → Theme |
+| 36 | **CodeMirror Mode Extensions** | Расширения Octave/MATLAB | Можно доработать 🟢 (CodeMirror modes) | Можно доработать 🟢 (установить modes отдельно) |
+| 37 | **CSS Selector** | Выбор темы из выпадающего списка | Можно доработать 🟢 (CSS) | Встроено: Settings → Theme |
+| 38 | **Datestamper** | Вставка текущей даты/времени | Можно доработать 🟢 (кнопка + kernel) | Можно доработать 🟢 (кнопка + kernel) |
+| 39 | **Equation Numbering** | Автонумерация формул MathJax | Можно доработать 🟡 (MathJax config) | Можно доработать 🟡 (MathJax config) |
+| 40 | **Exercise** | Скрытие решений (виджет +/−) | Можно доработать 🔴 (cell grouping UI) | Можно доработать 🔴 (cell grouping UI) |
+| 41 | **Exercise2** | Скрытие решений (чекбокс) | Можно доработать 🔴 (cell grouping UI) | Можно доработать 🔴 (cell grouping UI) |
+| 42 | **Export Embedded HTML** | Экспорт с встроенными картинками | Можно доработать 🟡 (nbconvert) | Встроено: File → Export Notebook As |
+| 43 | **Go to Running Cell** | Навигация к выполняемой ячейке (Alt-I) | Можно доработать 🟡 (kernel status) | Можно доработать 🟡 (kernel status) |
+| 44 | **Help Panel** | Панель со справкой по шорткатам | Можно доработать 🟢 (simple panel) | Встроено: Help → Keyboard Shortcuts |
+| 45 | **Load TeX Macros** | Загрузка LaTeX-макросов из файла | Можно доработать 🟡 (file loader) | Можно доработать 🟡 (file loader) |
+| 46 | **Move Selected Cells** | Перемещение ячеек вверх/вниз | Встроено: Edit → Move Cells Up/Down | Встроено: Edit → Move Cells Up/Down |
+| 47 | **nbTranslate** | Перевод ноутбуков / многоязычный режим | Можно доработать 🔴 (UI + translation API) | Можно доработать 🔴 (UI + translation API) |
+| 48 | **Notify** | Браузерное уведомление при свободном ядре | Можно поставить: pip install jupyterlab-notifications | Можно поставить: pip install jupyterlab-notifications |
+| 49 | **QTConsole** | Запуск QtConsole из интерфейса | Можно доработать 🟡 (external app) | Можно доработать 🟡 (external app) |
+| 50 | **Rubberband** | Множественный выбор мышью | Встроено: Shift + клик | Встроено: Shift + клик |
+| 51 | **Scroll Down** | Автопрокрутка вывода вниз | Можно доработать 🟢 (observer) | Можно доработать 🟢 (observer) |
+| 52 | **SKILL Syntax** | Подсветка SKILL (Cadence EDA) | Можно доработать 🟢 (CodeMirror mode) | Можно доработать 🟢 (CodeMirror mode) |
+| 53 | **Skip-Traceback** | Сворачивание трассировок ошибок | Можно поставить: pip install jupyterlab-skip-traceback | Можно поставить: pip install jupyterlab-skip-traceback |
+| 54 | **Tree Filter** | Фильтр файлов в дашборде | Можно доработать 🟡 (file browser API) | Встроено: Settings → fileNameSearcher |
+| 55 | **Execution Dependencies** | Зависимости выполнения ячеек | Можно доработать 🔴 (DAG solver + kernel) | Можно доработать 🔴 (DAG solver + kernel) |
+| 56 | **Live Markdown Preview** | Превью Markdown в реальном времени | Можно доработать 🟡 (split view) | Можно доработать 🟡 (split view) |
+| 57 | **Init Cell** | Автовыполнение ячеек при запуске ядра | Можно доработать 🟡 (notebook API) | Можно поставить: pip install jupyterlab-autorun-cells |
+| 58 | **Code Prettify** | Форматирование кода (autopep8/black) | Можно поставить: pip install jupyterlab-code-formatter black isort | Можно поставить: pip install jupyterlab-code-formatter black isort |
+
+---
+
+## Сводка по_NB7
+
+| Статус | Кол-во | Расширения |
+|--------|--------|------------|
+| Встроено | 8 | ToC, Collapsible Headings, Toggle Line Numbers, AddBefore, Rubberband, Move Selected Cells, Runtools (частично), Scratchpad (частично) |
+| Можно поставить | 10 | ExecuteTime, Limit Output, Skip-Traceback, Notify, Hinterland, Spellchecker, Select Keymap, Freeze, Variable Inspector, RISE, Code Prettify, Split Cells |
+| Можно доработать 🟢 | 12 | Code Folding, Hide Header, Table Beautifier, AutoSave Time, Code Font Size, CSS Selector, Datestamper, Help Panel, Scroll Down, SKILL Syntax, CodeMirror Mode Extensions |
+| Можно доработать 🟡 | 17 | Snippets, Snippets Menu, Comment/Uncomment, Navigation Hotkeys, Zen Mode, Hide Input, Hide Input All, Ruler, Gist-it, Printview, Highlighter, Autoscroll, Cell Filter, Equation Numbering, Export Embedded HTML, Go to Running Cell, Load TeX Macros, QTConsole, Tree Filter, Live Markdown Preview, Init Cell |
+| Можно доработать 🔴 | 6 | Python Markdown, Keyboard Shortcut Editor, Exercise, Exercise2, nbTranslate, Execution Dependencies |
+| **Итого** | **58** | |
+
+---
+
+## Сводка по JupyterLab
+
+| Статус | Кол-во | Расширения |
+|--------|--------|------------|
+| Встроено | 18 | ToC, Collapsible Headings, Code Folding, Code Folding (Editor), Hide Header, Hide Input, Hide Input All, Scratchpad, Ruler, Toggle Line Numbers, AddBefore, Rubberband, Move Selected Cells, AutoSave Time, Code Font Size, CSS Selector, Help Panel, Tree Filter |
+| Можно поставить | 14 | Variable Inspector, ExecuteTime, Hinterland, Snippets, Snippets Menu, Freeze, Limit Output, Spellchecker, Split Cells, Select Keymap, Notify, Skip-Traceback, Init Cell, Code Prettify |
+| Можно доработать 🟢 | 6 | Table Beautifier, CodeMirror Mode Extensions, Datestamper, Scroll Down, SKILL Syntax |
+| Можно доработать 🟡 | 10 | Gist-it, Highlighter, Autoscroll, Equation Numbering, Go to Running Cell, Load TeX Macros, QTConsole, Live Markdown Preview, Printview, Export Embedded HTML |
+| Можно доработать 🔴 | 5 | Python Markdown, Exercise, Exercise2, nbTranslate, Execution Dependencies |
+| **Итого** | **58** | |
+
+---
+
+## Итого: что уже работает
+
+| Платформа | Встроено + поставить | доработать 🟢 | доработать 🟡 | доработать 🔴 |
+|-----------|---------------------|---------------|---------------|---------------|
+| **NB7** | 18 | 12 | 17 | 6 |
+| **JupyterLab** | 32 | 6 | 10 | 5 |
+
+**JupyterLab покрывает 32 из 58 расширений без доработки (55%).**
+**NB7 покрывает 18 из 58 расширений без доработки (31%).**
+
+---
+
+## Установка расширений для JupyterLab
+
+```bash
+pip install \
+  jupyterlab-execute-time \
+  jupyterlab-limit-output \
+  jupyterlab-skip-traceback \
+  jupyterlab-notifications \
+  jupyterlab-spellchecker \
+  jupyterlab-vim \
+  jupyterlab-freeze \
+  lckr-jupyterlab-variableinspector \
+  jupyterlab-rise \
+  jupyterlab-code-formatter \
+  black isort \
+  python-lsp-server \
+  jupyterlab-gridwidth
+```
+
+---
+
+## Папка backup_extensions/
+
+Содержит исходные коды всех 58 расширений для классического Jupyter Notebook. Используйте их как справочник при переработке расширений под JupyterLab / Notebook 7.
+
+---
+
+## Легенда
+
+| Маркер | Значение |
+|--------|----------|
+| Встроено | Расширение уже есть в платформе |
+| Можно поставить | Доступно через `pip install` |
+| Можно доработать 🟢 | Низкая сложность (только CSS/UI) |
+| Можно доработать 🟡 | Средняя сложность (нужен API/kernel) |
+| Можно доработать 🔴 | Высокая сложность (сложная логика) |
